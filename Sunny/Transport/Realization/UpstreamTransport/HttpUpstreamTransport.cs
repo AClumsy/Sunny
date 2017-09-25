@@ -1,13 +1,14 @@
 ﻿using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.DependencyInjection;
-using Sunny.Services;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using Sunny.Abstractions;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
+using Sunny.Services;
+using Sunny.Abstractions;
 using Sunny.Configuration;
+using Sunny.Transport.UpstreamProtocolAdaptation;
 
 namespace Sunny.Transport.UpstreamTransport
 {
@@ -16,14 +17,16 @@ namespace Sunny.Transport.UpstreamTransport
     /// </summary>
     public class HttpUpstreamTransport : IUpstreamTransport
     {
-        private readonly ISunnyCoreService _sunnyCore;
+        private readonly ISunnyCoreService _coreService;
         private readonly ILogger _logger;
         private readonly RequestDelegate _next;
-        public HttpUpstreamTransport(RequestDelegate next, ILogger<HttpUpstreamTransport> logger, ISunnyCoreService handler)
+        private readonly IUpstreamProtocolAdaptation _protocolAdaptation;
+        public HttpUpstreamTransport(RequestDelegate next, ILogger<HttpUpstreamTransport> logger, ISunnyCoreService coreService)
         {
-            this._sunnyCore = handler;
+            this._coreService = coreService;
             this._logger = logger;
             this._next = next;
+            this._protocolAdaptation = ServiceProvider.Instance.GetService<HttpUpstreamProtocolAdaptation>();
         }
 
         /// <summary>
@@ -31,11 +34,11 @@ namespace Sunny.Transport.UpstreamTransport
         /// </summary>
         /// <param name="context">The context.</param>
         /// <returns></returns>
-        public async Task Invoke(HttpContext context)
+        public async Task InvokeAsync(HttpContext context)
         {
-           await this._sunnyCore.ProcessAsync(null);
+            await this._coreService.ProcessAsync(null);
             await _next(context);
         }
-      
+
     }
 }

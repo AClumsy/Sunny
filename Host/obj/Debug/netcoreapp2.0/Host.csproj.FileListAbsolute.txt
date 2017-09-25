@@ -11,3 +11,16 @@ C:\Users\LF\Desktop\Sunny\Sunny\Host\bin\Debug\netcoreapp2.0\Sunny.dll
 C:\Users\LF\Desktop\Sunny\Sunny\Host\bin\Debug\netcoreapp2.0\Sunny.pdb
 C:\Users\LF\Desktop\Sunny\Sunny\Host\obj\Debug\netcoreapp2.0\Host.dll
 C:\Users\LF\Desktop\Sunny\Sunny\Host\obj\Debug\netcoreapp2.0\Host.pdb
+E:\Source\Sunny\Host\bin\Debug\netcoreapp2.0\Host.deps.json
+E:\Source\Sunny\Host\bin\Debug\netcoreapp2.0\Host.runtimeconfig.json
+E:\Source\Sunny\Host\bin\Debug\netcoreapp2.0\Host.runtimeconfig.dev.json
+E:\Source\Sunny\Host\bin\Debug\netcoreapp2.0\Host.dll
+E:\Source\Sunny\Host\bin\Debug\netcoreapp2.0\Host.pdb
+E:\Source\Sunny\Host\bin\Debug\netcoreapp2.0\Sunny.dll
+E:\Source\Sunny\Host\bin\Debug\netcoreapp2.0\Sunny.pdb
+E:\Source\Sunny\Host\obj\Debug\netcoreapp2.0\Host.csprojResolveAssemblyReference.cache
+E:\Source\Sunny\Host\obj\Debug\netcoreapp2.0\Host.csproj.CoreCompileInputs.cache
+E:\Source\Sunny\Host\obj\Debug\netcoreapp2.0\Host.AssemblyInfoInputs.cache
+E:\Source\Sunny\Host\obj\Debug\netcoreapp2.0\Host.AssemblyInfo.cs
+E:\Source\Sunny\Host\obj\Debug\netcoreapp2.0\Host.dll
+E:\Source\Sunny\Host\obj\Debug\netcoreapp2.0\Host.pdb

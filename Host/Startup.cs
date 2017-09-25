@@ -10,6 +10,7 @@ using Sunny.Transport;
 using Sunny.Transport.UpstreamTransport;
 using Sunny.Services;
 using Sunny.Services.SunnyCore;
+using Sunny.Transport.UpstreamProtocolAdaptation;
 
 namespace Host
 {
@@ -18,6 +19,7 @@ namespace Host
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddTransient<ISunnyCoreService, DefaultSunnyCoreService>();
+            services.AddTransient<HttpUpstreamProtocolAdaptation>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
