@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Configuration\" />
+    <Folder Include="Logging\Models\" />
+    <Folder Include="Services\Realization\Cache\" />
+    <Folder Include="Services\Realization\ACL\" />
+    <Folder Include="Services\Realization\Authenticated\" />
+    <Folder Include="Services\Realization\Authorisated\" />
+    <Folder Include="Services\Realization\DataSecurity\" />
+    <Folder Include="Transport\Realization\DownstreamProtocol\" />
+    <Folder Include="Transport\Realization\DownstreamTransport\" />
+    <Folder Include="Services\Realization\Exception\" />
+    <Folder Include="Services\Realization\LoadBalancing\" />
+    <Folder Include="Services\Realization\QoS\" />
+    <Folder Include="Services\Realization\SecondaryCache\" />
+    <Folder Include="Services\Realization\ServiceDiscovery\" />
+    <Folder Include="Infrastructure\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="2.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+  </ItemGroup>
+
+</Project>
