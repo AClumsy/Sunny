@@ -18,8 +18,7 @@ namespace Host
     {
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddTransient<ISunnyCoreService, DefaultSunnyCoreService>();
-            services.AddTransient<HttpUpstreamProtocolAdaptation>();
+            services.AddSunny();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -30,9 +29,8 @@ namespace Host
                 app.UseDeveloperExceptionPage();
             }
 
-            Sunny.Configuration.ServiceProvider.Instance = app.ApplicationServices;
-            app.UseMiddleware<HttpUpstreamTransport>();
-
+            app.UseSunny();
+            
             app.Run(async (context) =>
             {
                 await context.Response.WriteAsync("Hello World!");

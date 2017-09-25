@@ -4,13 +4,17 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-namespace Sunny.Abstractions
+namespace Sunny
 {
     /// <summary>
     /// 表示 Sunny 请求对象
     /// </summary>
     public abstract class SunnyRequest
     {
+        protected SunnyRequest()
+        {
+
+        }
         public abstract SunnyAuthenticated Authentication { get; set; }
         public abstract SunnyAuthorisated Authorisation { get; set; }
         public abstract SunnyRoute SunnyRoute { get; set; }

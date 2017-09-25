@@ -26,7 +26,7 @@ namespace Sunny.Transport.UpstreamTransport
             this._coreService = coreService;
             this._logger = logger;
             this._next = next;
-            this._protocolAdaptation = ServiceProvider.Instance.GetService<HttpUpstreamProtocolAdaptation>();
+            this._protocolAdaptation = ServiceProvider.Instance.GetService<IUpstreamProtocolAdaptation>();
         }
 
         /// <summary>

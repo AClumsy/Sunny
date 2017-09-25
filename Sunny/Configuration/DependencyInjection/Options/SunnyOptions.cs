@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Sunny.Models
+namespace Sunny.Configuration
 {
-    public class SunnyConfigOptions
+    public class SunnyOptions
     {
         public bool IsAuthenticated { get; }
         public bool IsAuthorised { get; }

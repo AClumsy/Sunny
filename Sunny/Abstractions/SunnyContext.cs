@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Sunny.Abstractions
+namespace Sunny
 {
     /// <summary>
     /// 表示 Sunny 上下文

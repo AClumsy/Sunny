@@ -16,3 +16,12 @@ E:\Source\Sunny\Sunny\obj\Debug\netstandard2.0\Sunny.AssemblyInfoInputs.cache
 E:\Source\Sunny\Sunny\obj\Debug\netstandard2.0\Sunny.AssemblyInfo.cs
 E:\Source\Sunny\Sunny\obj\Debug\netstandard2.0\Sunny.dll
 E:\Source\Sunny\Sunny\obj\Debug\netstandard2.0\Sunny.pdb
+E:\工作项目\Sunny\Sunny\bin\Debug\netstandard2.0\Sunny.deps.json
+E:\工作项目\Sunny\Sunny\bin\Debug\netstandard2.0\Sunny.dll
+E:\工作项目\Sunny\Sunny\bin\Debug\netstandard2.0\Sunny.pdb
+E:\工作项目\Sunny\Sunny\obj\Debug\netstandard2.0\Sunny.csprojResolveAssemblyReference.cache
+E:\工作项目\Sunny\Sunny\obj\Debug\netstandard2.0\Sunny.csproj.CoreCompileInputs.cache
+E:\工作项目\Sunny\Sunny\obj\Debug\netstandard2.0\Sunny.AssemblyInfoInputs.cache
+E:\工作项目\Sunny\Sunny\obj\Debug\netstandard2.0\Sunny.AssemblyInfo.cs
+E:\工作项目\Sunny\Sunny\obj\Debug\netstandard2.0\Sunny.dll
+E:\工作项目\Sunny\Sunny\obj\Debug\netstandard2.0\Sunny.pdb

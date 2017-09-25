@@ -883,7 +883,7 @@
       ]
     },
     "Microsoft.Extensions.Primitives/2.0.0": {
-      "sha512": "oY3O6GjfS1nyFDG678tt3nlM86dFpt9dqz5pwiDss5/xEkmWfg339XJc+7+9SZs2oMujLs8R+t3oCSDultvqOA==",
+      "sha512": "ukg53qNlqTrK38WA30b5qhw0GD7y3jdI9PHHASjdKyTcBHTevFM2o23tyk3pWCgAV27Bbkm+CPQ2zUe1ZOuYSA==",
       "type": "package",
       "path": "microsoft.extensions.primitives/2.0.0",
       "files": [
@@ -920,7 +920,7 @@
       ]
     },
     "NETStandard.Library/2.0.0": {
-      "sha512": "mP2Q10jraoYT4ugwQDTNANoEeT80EQU3vAOpCRjJeXWIYMs5Tkjk8d+XSGofvhhgebnPyLbsL4Zm7MCn4gVViQ==",
+      "sha512": "7jnbRU+L08FXKMxqUflxEXtVymWvNOrS8yHgu9s6EM8Anr6T/wIX4nZ08j/u3Asz+tCufp3YVwFSEvFTPYmBPA==",
       "type": "package",
       "path": "netstandard.library/2.0.0",
       "files": [
@@ -2478,7 +2478,7 @@
       ]
     },
     "System.Runtime.CompilerServices.Unsafe/4.4.0": {
-      "sha512": "6SmegimREhuSOkf2XZK9ZTF02K6Gev9cKb2KlC/omsL3F2KWcFPYTd4y159T2cHhG12oftgDM04Lphi2mqbohQ==",
+      "sha512": "9dLLuBxr5GNmOfl2jSMcsHuteEg32BEfUotmmUkmZjpR3RpVHE8YQwt0ow3p6prwA1ME8WqDVZqrr8z6H8G+Kw==",
       "type": "package",
       "path": "system.runtime.compilerservices.unsafe/4.4.0",
       "files": [
@@ -3300,7 +3300,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Administrator\\.nuget\\packages\\": {},
+    "C:\\Users\\LF\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -3309,17 +3309,17 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "E:\\Source\\Sunny\\Sunny\\Sunny.csproj",
+      "projectUniqueName": "E:\\工作项目\\Sunny\\Sunny\\Sunny.csproj",
       "projectName": "Sunny",
-      "projectPath": "E:\\Source\\Sunny\\Sunny\\Sunny.csproj",
-      "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "E:\\Source\\Sunny\\Sunny\\obj\\",
+      "projectPath": "E:\\工作项目\\Sunny\\Sunny\\Sunny.csproj",
+      "packagesPath": "C:\\Users\\LF\\.nuget\\packages\\",
+      "outputPath": "E:\\工作项目\\Sunny\\Sunny\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\LF\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

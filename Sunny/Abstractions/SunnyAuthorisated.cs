@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Sunny.Abstractions
+namespace Sunny
 {
     /// <summary>
-    /// 表示授权
+    /// 身份授权
     /// </summary>
-  public abstract  class SunnyAuthorisated
+    public abstract class SunnyAuthorisated
     {
     }
 }
