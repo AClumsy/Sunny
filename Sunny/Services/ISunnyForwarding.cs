@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Sunny.Transport
+namespace Sunny.Hosting
 {
     /// <summary>
-    /// Sunny 消息协议转换 基础接口
+    /// 转发服务
     /// </summary>
-    public interface ISunnyProtocolAdaptation
+    public interface ISunnyForwarding
     {
     }
 }

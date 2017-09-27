@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Sunny.Configuration
+namespace Sunny.Models
 {
-    public class ReRoute
+    public class Routeing
     {
-        public ReRoute(bool isAuthenticated, bool isAuthorised, bool isCached, bool isQos, bool isEnableRateLimiting)
+        public Routeing(bool isAuthenticated, bool isAuthorised, bool isCached, bool isQos, bool isEnableRateLimiting)
         {
             IsAuthenticated = isAuthenticated;
             IsAuthorised = isAuthorised;

@@ -6,27 +6,23 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using Sunny.Services;
-using Sunny.Abstractions;
 using Sunny.Configuration;
-using Sunny.Transport.UpstreamProtocolAdaptation;
 
-namespace Sunny.Transport.UpstreamTransport
+namespace Sunny.Hosting.Http
 {
     /// <summary>
     /// 上游通信 
     /// </summary>
-    public class HttpUpstreamTransport : IUpstreamTransport
+    public class HttpHosting : ISunnyHosting
     {
-        private readonly ISunnyCoreService _coreService;
+        private readonly SunnyRequestDelegate _sunnyRequest;
         private readonly ILogger _logger;
         private readonly RequestDelegate _next;
-        private readonly IUpstreamProtocolAdaptation _protocolAdaptation;
-        public HttpUpstreamTransport(RequestDelegate next, ILogger<HttpUpstreamTransport> logger, ISunnyCoreService coreService)
+        public HttpHosting(RequestDelegate next, ILogger<HttpHosting> logger, SunnyRequestDelegate sunnyRequest)
         {
-            this._coreService = coreService;
+            this._sunnyRequest = sunnyRequest;
             this._logger = logger;
             this._next = next;
-            this._protocolAdaptation = ServiceProvider.Instance.GetService<IUpstreamProtocolAdaptation>();
         }
 
         /// <summary>
@@ -36,7 +32,8 @@ namespace Sunny.Transport.UpstreamTransport
         /// <returns></returns>
         public async Task InvokeAsync(HttpContext context)
         {
-            await this._coreService.ProcessAsync(null);
+            SunnyContext sc = null;
+            await this._sunnyRequest(sc);
             await _next(context);
         }
 

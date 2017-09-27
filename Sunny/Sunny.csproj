@@ -5,6 +5,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Hosting\Realization\DownstreamProtocol\**" />
+    <Compile Remove="Hosting\Realization\DownstreamTransport\**" />
+    <EmbeddedResource Remove="Hosting\Realization\DownstreamProtocol\**" />
+    <EmbeddedResource Remove="Hosting\Realization\DownstreamTransport\**" />
+    <None Remove="Hosting\Realization\DownstreamProtocol\**" />
+    <None Remove="Hosting\Realization\DownstreamTransport\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Configuration\DependencyInjection\BuilderExtensions\" />
     <Folder Include="Logging\Models\" />
     <Folder Include="Services\Realization\Cache\" />
@@ -12,8 +21,6 @@
     <Folder Include="Services\Realization\Authenticated\" />
     <Folder Include="Services\Realization\Authorisated\" />
     <Folder Include="Services\Realization\DataSecurity\" />
-    <Folder Include="Transport\Realization\DownstreamProtocol\" />
-    <Folder Include="Transport\Realization\DownstreamTransport\" />
     <Folder Include="Services\Realization\Exception\" />
     <Folder Include="Services\Realization\LoadBalancing\" />
     <Folder Include="Services\Realization\QoS\" />

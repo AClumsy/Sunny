@@ -1,4 +1,4 @@
-﻿using Sunny.Models;
+﻿using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -15,12 +15,11 @@ namespace Sunny
         {
 
         }
+        public abstract SunnyContext SunnyContext { get; }
         public abstract SunnyAuthenticated Authentication { get; set; }
         public abstract SunnyAuthorisated Authorisation { get; set; }
-        public abstract SunnyRoute SunnyRoute { get; set; }
-        public abstract SunnyRequestMessage Body { get; set; }
+        public abstract SunnyRequestMessage RequestMessage { get; set; }
         public abstract HostString Host { get; set; }
-        public abstract RequestId RequestId { get; set; }
-        public abstract SunnyContext SunnyContext { get; }
+        
     }
 }
