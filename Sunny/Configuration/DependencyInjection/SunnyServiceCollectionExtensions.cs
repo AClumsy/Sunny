@@ -1,8 +1,5 @@
 ﻿using Sunny.Configuration;
 using Sunny.Services;
-using Sunny.Services.SunnyCore;
-using Sunny.Transport;
-using Sunny.Transport.UpstreamProtocolAdaptation;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -33,8 +30,8 @@ namespace Microsoft.Extensions.DependencyInjection
         {
             var builder = services.AddSunnyBuilder();
 
-            builder.Services.AddTransient<ISunnyCoreService, DefaultSunnyCoreService>();
-            builder.Services.AddTransient<IUpstreamProtocolAdaptation, HttpUpstreamProtocolAdaptation>();
+            //builder.Services.AddTransient<ISunnyCoreService, DefaultSunnyCoreService>();
+            //builder.Services.AddTransient<IUpstreamProtocolAdaptation, HttpUpstreamProtocolAdaptation>();
 
             return new SunnyBuilder(services);
         }

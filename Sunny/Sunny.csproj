@@ -5,28 +5,16 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Hosting\Realization\DownstreamProtocol\**" />
-    <Compile Remove="Hosting\Realization\DownstreamTransport\**" />
-    <EmbeddedResource Remove="Hosting\Realization\DownstreamProtocol\**" />
-    <EmbeddedResource Remove="Hosting\Realization\DownstreamTransport\**" />
-    <None Remove="Hosting\Realization\DownstreamProtocol\**" />
-    <None Remove="Hosting\Realization\DownstreamTransport\**" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Folder Include="Configuration\DependencyInjection\BuilderExtensions\" />
-    <Folder Include="Logging\Models\" />
-    <Folder Include="Services\Realization\Cache\" />
-    <Folder Include="Services\Realization\ACL\" />
-    <Folder Include="Services\Realization\Authenticated\" />
-    <Folder Include="Services\Realization\Authorisated\" />
-    <Folder Include="Services\Realization\DataSecurity\" />
-    <Folder Include="Services\Realization\Exception\" />
-    <Folder Include="Services\Realization\LoadBalancing\" />
-    <Folder Include="Services\Realization\QoS\" />
-    <Folder Include="Services\Realization\SecondaryCache\" />
-    <Folder Include="Services\Realization\ServiceDiscovery\" />
-    <Folder Include="Infrastructure\" />
+    <Folder Include="Configuration\Startup\" />
+    <Folder Include="Infrastructure\Logging\Models\" />
+    <Folder Include="Services\ACL\RateLimiting\" />
+    <Folder Include="Services\ACL\TrustControl\" />
+    <Folder Include="Services\Auth\Authenticated\" />
+    <Folder Include="Services\Auth\Authorisated\" />
+    <Folder Include="Services\Exception\" />
+    <Folder Include="Services\SecondaryCache\" />
+    <Folder Include="Services\QoS\" />
   </ItemGroup>
 
   <ItemGroup>

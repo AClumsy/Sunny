@@ -10,7 +10,6 @@ C:\Users\LF\Desktop\Sunny\Sunny\Sunny\obj\Debug\netstandard2.0\Sunny.pdb
 E:\Source\Sunny\Sunny\bin\Debug\netstandard2.0\Sunny.deps.json
 E:\Source\Sunny\Sunny\bin\Debug\netstandard2.0\Sunny.dll
 E:\Source\Sunny\Sunny\bin\Debug\netstandard2.0\Sunny.pdb
-E:\Source\Sunny\Sunny\obj\Debug\netstandard2.0\Sunny.csprojResolveAssemblyReference.cache
 E:\Source\Sunny\Sunny\obj\Debug\netstandard2.0\Sunny.csproj.CoreCompileInputs.cache
 E:\Source\Sunny\Sunny\obj\Debug\netstandard2.0\Sunny.AssemblyInfoInputs.cache
 E:\Source\Sunny\Sunny\obj\Debug\netstandard2.0\Sunny.AssemblyInfo.cs
