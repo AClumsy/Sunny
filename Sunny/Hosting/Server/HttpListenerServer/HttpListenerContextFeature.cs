@@ -6,7 +6,7 @@ using System.IO;
 using System.Net;
 using Sunny.Application.Feature;
 
-namespace Sunny.Hosting.HttpListenerServer
+namespace Sunny.Hosting.Server
 {
     public class HttpListenerContextFeature : ISunnyRequestFeature, ISunnyResponseFeature, IConnectionInfoFeature
     {
@@ -27,7 +27,7 @@ namespace Sunny.Hosting.HttpListenerServer
         public IPAddress LocalIpAddress { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public int RemotePort { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public int LocalPort { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        object ISunnyRequestFeature.HostServer { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public object ServerContext => this.Context;
 
         public HttpListenerContextFeature(HttpListenerContext context)
         {

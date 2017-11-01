@@ -4,9 +4,9 @@ using System.Net;
 using System.Text;
 using Sunny.Application;
 using System.Threading.Tasks;
-using Sunny.Application.Feature;
 
-namespace Sunny.Hosting.HttpListenerServer
+
+namespace Sunny.Hosting.Server
 {
     public class HttpListenerServer : IServer
     {
@@ -16,7 +16,7 @@ namespace Sunny.Hosting.HttpListenerServer
         {
             this.Features = feature;
             this.Listener = new HttpListener();
-            this.Listener.Prefixes.Add(url ?? "http://localhost:3721/");
+            this.Listener.Prefixes.Add(url ?? "http://localhost:418/");
         }
         public Task StartAsync<TContext>(ISunnyApplication<TContext> application)
         {

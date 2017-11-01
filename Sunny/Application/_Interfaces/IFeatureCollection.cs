@@ -6,15 +6,6 @@ namespace Sunny.Application
 {
     public interface IFeatureCollection : IEnumerable<KeyValuePair<Type, object>>
     {
-        /// <summary>
-        /// Indicates if the collection can be modified.
-        /// </summary>
-        bool IsReadOnly { get; }
-
-        /// <summary>
-        /// Incremented for each modification and can be used to verify cached results.
-        /// </summary>
-        int Revision { get; }
 
         /// <summary>
         /// Gets or sets a given feature. Setting a null value removes the feature.

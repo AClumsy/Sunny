@@ -8,9 +8,10 @@ namespace Sunny.Application.Feature
     public class DefaultConnectionInfoFeature : IConnectionInfoFeature
     {
         public string ConnectionId { get; set; }
-        public IPAddress RemoteIpAddress { get; set; }
-        public IPAddress LocalIpAddress { get; set; }
-        public int RemotePort { get; set; }
-        public int LocalPort { get; set; }
+        public IPAddress RemoteIpAddress { get;  }
+        public IPAddress LocalIpAddress { get; }
+        public int RemotePort { get;  }
+        public int LocalPort { get;  }
+        public object ServerContext => null;
     }
 }

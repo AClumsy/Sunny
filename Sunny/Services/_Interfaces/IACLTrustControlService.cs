@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Sunny.Services._Interface
+namespace Sunny.Services
 {
     /// <summary>
     /// ACL 信任控制
     /// </summary>
-    public class IACLTrustControlService
+    public interface IACLTrustControlService
     {
     }
 }

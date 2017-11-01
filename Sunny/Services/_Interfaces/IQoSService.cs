@@ -8,7 +8,7 @@ namespace Sunny.Services
     /// <summary>
     /// 质量服务
     /// </summary>
-    public class IQoSService : ISunnyService
+    public interface IQoSService : ISunnyService
     {
        
     }

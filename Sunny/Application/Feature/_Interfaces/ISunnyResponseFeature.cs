@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-namespace Sunny.Application.Feature
+namespace Sunny.Application
 {
     public interface ISunnyResponseFeature: IFeature
     {

@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Sunny
+namespace Sunny.Configuration
 {
     /// <summary>
     /// 请求底层连接的信息。
@@ -22,7 +22,6 @@ namespace Sunny
         public abstract IPAddress LocalIpAddress { get;  }
 
         public abstract int LocalPort { get;}
-
-      
+        public abstract object ServerContext { get; }
     }
 }

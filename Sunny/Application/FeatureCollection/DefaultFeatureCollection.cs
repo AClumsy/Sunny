@@ -21,12 +21,7 @@ namespace Sunny.Application.FeatureCollection
             _defaults = defaults;
         }
 
-        public virtual int Revision
-        {
-            get { return _containerRevision + (_defaults?.Revision ?? 0); }
-        }
-
-        public bool IsReadOnly { get { return false; } }
+     
 
         public object this[Type key]
         {

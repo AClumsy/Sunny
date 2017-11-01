@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-namespace Sunny.Application.Feature
+namespace Sunny.Application
 {
     public interface ISunnyRequestFeature : IFeature
     {
@@ -13,7 +13,6 @@ namespace Sunny.Application.Feature
         int Port { get; set; }
         string Path { get; set; }
         Stream Body { get; set; }
-        object HostServer { get; set; }
         long ContentLength { get; set; }
     }
 }

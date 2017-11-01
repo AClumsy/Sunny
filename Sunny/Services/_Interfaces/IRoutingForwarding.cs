@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Sunny.Hosting
+namespace Sunny.Services
 {
     /// <summary>
     /// 路由转发服务

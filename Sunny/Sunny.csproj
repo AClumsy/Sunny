@@ -5,9 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Infrastructure\Logging\Models\**" />
+    <EmbeddedResource Remove="Infrastructure\Logging\Models\**" />
+    <None Remove="Infrastructure\Logging\Models\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Configuration\DependencyInjection\BuilderExtensions\" />
     <Folder Include="Configuration\Startup\" />
-    <Folder Include="Infrastructure\Logging\Models\" />
     <Folder Include="Services\ACL\RateLimiting\" />
     <Folder Include="Services\ACL\TrustControl\" />
     <Folder Include="Services\Auth\Authenticated\" />

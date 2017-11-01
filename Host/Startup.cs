@@ -19,6 +19,7 @@ namespace Host
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSunny();
+          
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Sunny.Hosting
+namespace Sunny.Hosting.Server
 {
-    public interface ISunnyHost
+    public class DefaultServerFactory
     {
     }
 }

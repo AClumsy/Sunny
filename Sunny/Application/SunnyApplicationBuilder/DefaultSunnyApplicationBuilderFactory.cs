@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Sunny.Application.SunnyApplicationBuilderFactory
+namespace Sunny.Application.SunnyApplicationBuilder
 {
     public class DefaultSunnyApplicationBuilderFactory : ISunnyApplicationBuilderFactory
     {
         public ISunnyApplicationBuilder CreateBuilder()
         {
-            throw new NotImplementedException();
+            return new DefaultSunnyApplicationBuilder();
         }
     }
 }

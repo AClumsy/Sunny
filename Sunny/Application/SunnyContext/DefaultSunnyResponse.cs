@@ -8,14 +8,14 @@ namespace Sunny.Application
 {
     public class DefaultSunnyResponse : SunnyResponse
     {
-        private string _statusCode { get; set; }
+        private readonly static FeatureReference<ISunnyResponseFeature> featureReference = new FeatureReference<ISunnyResponseFeature>(new DefaultSunnyResponseFeature());
+
         public DefaultSunnyResponse(SunnyContext context)
         {
             this.SunnyContext = context;
-            this.Feature = this.SunnyContext.Features.Get<ISunnyResponseFeature>();
             this.StatusCode = this.Feature.StatusCode;
         }
-        private ISunnyResponseFeature Feature { get; }
+        private ISunnyResponseFeature Feature => featureReference.Fetch(this.SunnyContext.Features);
         public override SunnyContext SunnyContext { get; }
         public override Stream OutputStream => this.Feature.OutputStream;
         public override string StatusCode { get; internal set; }

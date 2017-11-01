@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Sunny
+namespace Sunny.Models
 {
     public class SunnyRouteing
     {

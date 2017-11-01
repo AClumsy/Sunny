@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
+using Sunny.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -20,9 +21,6 @@ namespace Sunny.Application
         public abstract SunnyRouteing SunnyRoute { get; internal set; }
         public abstract long? ContentLength { get; }
         public abstract Stream Body { get;  }
-        /// <summary>
-        /// 主机服务上下文
-        /// </summary>
-        public abstract object HostServer { get; }
+ 
     }
 }

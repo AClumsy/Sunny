@@ -1,33 +1,45 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Sunny.Application.SunnyApplication
 {
-    public class DefaultSunnyApplication : ISunnyApplication<SunnyContext>
+    public class DefaultSunnyApplication : ISunnyApplication<DefaultSunnyApplication.Context>
     {
-        public SunnyContext Context { get; }
-        public RequestDelegate Application { get; }
-        public DefaultSunnyApplication(RequestDelegate application,SunnyContext context)
+        private readonly RequestDelegate _application;
+        private readonly ISunnyContextFactory _sunnyContextFactory;
+
+        public DefaultSunnyApplication(RequestDelegate application, ISunnyContextFactory sunnyContextFactory)
         {
-            this.Application = application;
-            this.Context = context;
+            this._application = application;
+            this._sunnyContextFactory = sunnyContextFactory;
         }
 
-        public SunnyContext CreateContext(IFeatureCollection contextFeatures)
+        public Context CreateContext(IFeatureCollection contextFeatures)
         {
-            throw new NotImplementedException();
+            var context = new Context();
+            context.SunnyContext = _sunnyContextFactory.Create(contextFeatures);
+            return context;
         }
 
-        public void DisposeContext(SunnyContext context, Exception exception)
+        public void DisposeContext(Context context, Exception exception)
         {
-            throw new NotImplementedException();
+            var sunnyContext = context.SunnyContext;
+            _sunnyContextFactory.Dispose(sunnyContext);
         }
 
-        public Task ProcessRequestAsync(SunnyContext context)
+        public Task ProcessRequestAsync(Context context)
         {
-            throw new NotImplementedException();
+            return this._application(context.SunnyContext);
+        }
+
+        public struct Context
+        {
+            public SunnyContext SunnyContext { get; set; }
+            public IDisposable Scope { get; set; }
+            public long StartTimestamp => Stopwatch.GetTimestamp();
         }
     }
 }

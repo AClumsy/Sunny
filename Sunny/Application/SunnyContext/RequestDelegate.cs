@@ -5,5 +5,5 @@ using System.Threading.Tasks;
 
 namespace Sunny.Application
 {
-    public delegate Task RequestDelegate(SunnyContext context);
+    public delegate Task RequestDelegate(SunnyContext sunnyContext);
 }
