@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
+using Sunny.Application;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -10,6 +11,6 @@ namespace Sunny.Hosting
     {
         void ConfigureServices(IServiceCollection services);
 
-        void Configure(IApplicationBuilder app);
+        void Configure(ISunnyApplicationBuilder app);
     }
 }
