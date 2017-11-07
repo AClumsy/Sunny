@@ -6,7 +6,7 @@ using System.IO;
 using System.Net;
 using Sunny.Application.Feature;
 
-namespace Sunny.Hosting.Server
+namespace Sunny.Hosting.Server.HttpListenerServer
 {
     public class HttpListenerContextFeature : ISunnyRequestFeature, ISunnyResponseFeature, IConnectionInfoFeature
     {

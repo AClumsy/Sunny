@@ -6,11 +6,8 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
-using Sunny.Transport;
-using Sunny.Transport.UpstreamTransport;
-using Sunny.Services;
-using Sunny.Services.SunnyCore;
-using Sunny.Transport.UpstreamProtocolAdaptation;
+//using Sunny.Services;
+using Autofac;
 
 namespace Host
 {
@@ -19,7 +16,7 @@ namespace Host
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSunny();
-          
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

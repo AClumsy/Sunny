@@ -1,4 +1,5 @@
 ﻿using Sunny.Configuration;
+using Sunny.Hosting.Server.AspNetCoreServer;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -17,8 +18,7 @@ namespace Microsoft.AspNetCore.Builder
         /// <returns></returns>
         public static IApplicationBuilder UseSunny(this IApplicationBuilder app)
         {
-            ServiceProvider.Instance = app.ApplicationServices;
-            //app.UseMiddleware<HttpUpstreamTransport>();
+            app.UseMiddleware<SunnyMiddleware>();
             return app;
         }
     }

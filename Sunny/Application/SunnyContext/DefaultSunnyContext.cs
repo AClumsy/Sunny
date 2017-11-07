@@ -17,12 +17,15 @@ namespace Sunny.Application
         public DefaultSunnyContext(IFeatureCollection featureCollection)
         {
             this.Features = featureCollection;
+            this.Request = new DefaultSunnyRequest(this);
+            this.Response = new DefaultSunnyResponse(this);
+            this.ConnectionInfo = new DefaultConnectionInfo(this);
         }
 
         public override IFeatureCollection Features { get; }
-        public override SunnyRequest Request => new DefaultSunnyRequest(this);
-        public override SunnyResponse Response => new DefaultSunnyResponse(this);
-        public override ConnectionInfo ConnectionInfo => new DefaultConnectionInfo(this);
+        public override SunnyRequest Request { get; }
+        public override SunnyResponse Response { get; }
+        public override ConnectionInfo ConnectionInfo { get; }
         public override ClaimsPrincipal User { get; }
 
 

@@ -15,17 +15,17 @@ namespace Sunny.Application
         public DefaultConnectionInfo(SunnyContext context)
         {
             this.SunnyContext = context;
+            this.Feature = featureReference.Fetch(this.SunnyContext.Features);
         }
 
     
         private SunnyContext SunnyContext { get; }
-        private IConnectionInfoFeature Feature => featureReference.Fetch(this.SunnyContext.Features);
+        private IConnectionInfoFeature Feature { get; }
         public override string Id => this.Feature.ConnectionId;
         public override IPAddress RemoteIpAddress => this.Feature.RemoteIpAddress;
         public override int RemotePort => this.Feature.RemotePort;
         public override IPAddress LocalIpAddress => this.Feature.LocalIpAddress;
         public override int LocalPort => this.Feature.LocalPort;
-
         public override object ServerContext => this.Feature.ServerContext;
     }
 }

@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Sunny.Configuration
+namespace Sunny.Application
 {
     /// <summary>
     /// 请求底层连接的信息。

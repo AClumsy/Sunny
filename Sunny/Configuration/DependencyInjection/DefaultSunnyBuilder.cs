@@ -10,14 +10,14 @@ namespace Sunny.Configuration
     /// <summary>
     /// Sunny helper class for DI configuration
     /// </summary>
-    public class SunnyBuilder : ISunnyBuilder
+    public class DefaultSunnyBuilder : ISunnyBuilder
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SunnyBuilder"/> class.
+        /// Initializes a new instance of the <see cref="DefaultSunnyBuilder"/> class.
         /// </summary>
         /// <param name="services">The services.</param>
         /// <exception cref="System.ArgumentNullException">services</exception>
-        public SunnyBuilder(IServiceCollection services)
+        public DefaultSunnyBuilder(IServiceCollection services)
         {
             Services = services ?? throw new ArgumentNullException(nameof(services));
         }

@@ -18,22 +18,22 @@ namespace Microsoft.Extensions.DependencyInjection
         /// <returns></returns>
         public static ISunnyBuilder AddSunnyBuilder(this IServiceCollection services)
         {
-            return new SunnyBuilder(services);
+            return new DefaultSunnyBuilder(services);
         }
 
         /// <summary>
-        /// Adds IdentityServer.
+        /// Adds Sunny.
         /// </summary>
         /// <param name="services">The services.</param>
         /// <returns></returns>
         public static ISunnyBuilder AddSunny(this IServiceCollection services)
         {
             var builder = services.AddSunnyBuilder();
+            builder
+                .AddServices();
 
-            //builder.Services.AddTransient<ISunnyCoreService, DefaultSunnyCoreService>();
-            //builder.Services.AddTransient<IUpstreamProtocolAdaptation, HttpUpstreamProtocolAdaptation>();
+            return builder;
 
-            return new SunnyBuilder(services);
         }
 
     }

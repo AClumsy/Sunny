@@ -6,15 +6,14 @@ using Sunny.Application;
 using System.Threading.Tasks;
 
 
-namespace Sunny.Hosting.Server
+namespace Sunny.Hosting.Server.HttpListenerServer
 {
     public class HttpListenerServer : IServer
     {
         public HttpListener Listener { get; }
         public IFeatureCollection Features { get; }
-        public HttpListenerServer(string url, IFeatureCollection feature)
+        public HttpListenerServer(string url)
         {
-            this.Features = feature;
             this.Listener = new HttpListener();
             this.Listener.Prefixes.Add(url ?? "http://localhost:418/");
         }

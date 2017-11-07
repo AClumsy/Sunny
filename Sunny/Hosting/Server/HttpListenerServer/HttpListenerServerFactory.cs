@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Sunny.Hosting.SunnyHost
+namespace Sunny.Hosting.Server
 {
-    public class DefaultSunnyHost : ISunnyHost
+    public class HttpListenerServerFactory : IServerFactory
     {
-        public void Start()
+        public IServer CreateServer()
         {
             throw new NotImplementedException();
         }

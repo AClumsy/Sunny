@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sunny.Application.SunnyApplicationBuilder
+namespace Sunny.Application.SunnyApplication
 {
     public class DefaultSunnyApplicationBuilder : ISunnyApplicationBuilder
     {

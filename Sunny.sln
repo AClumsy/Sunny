@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sunny", "Sunny\Sunny.csproj
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{1ED239D0-D3BC-4F57-9156-F9DB2AF3C96F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Host", "Host\Host.csproj", "{915104C2-0B9F-4C02-880C-2544AB382327}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Host", "Host\Host.csproj", "{915104C2-0B9F-4C02-880C-2544AB382327}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HostApp", "HostApp\HostApp.csproj", "{EA41E1A0-A257-4BAF-B8BC-AAF799D4B245}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,6 +25,10 @@ Global
 		{915104C2-0B9F-4C02-880C-2544AB382327}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{915104C2-0B9F-4C02-880C-2544AB382327}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{915104C2-0B9F-4C02-880C-2544AB382327}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA41E1A0-A257-4BAF-B8BC-AAF799D4B245}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA41E1A0-A257-4BAF-B8BC-AAF799D4B245}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA41E1A0-A257-4BAF-B8BC-AAF799D4B245}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA41E1A0-A257-4BAF-B8BC-AAF799D4B245}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -16,8 +16,6 @@ E:\Source\Sunny\Host\bin\Debug\netcoreapp2.0\Host.runtimeconfig.json
 E:\Source\Sunny\Host\bin\Debug\netcoreapp2.0\Host.runtimeconfig.dev.json
 E:\Source\Sunny\Host\bin\Debug\netcoreapp2.0\Host.dll
 E:\Source\Sunny\Host\bin\Debug\netcoreapp2.0\Host.pdb
-E:\Source\Sunny\Host\bin\Debug\netcoreapp2.0\Sunny.dll
-E:\Source\Sunny\Host\bin\Debug\netcoreapp2.0\Sunny.pdb
 E:\Source\Sunny\Host\obj\Debug\netcoreapp2.0\Host.csprojResolveAssemblyReference.cache
 E:\Source\Sunny\Host\obj\Debug\netcoreapp2.0\Host.csproj.CoreCompileInputs.cache
 E:\Source\Sunny\Host\obj\Debug\netcoreapp2.0\Host.AssemblyInfoInputs.cache

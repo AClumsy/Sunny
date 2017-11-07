@@ -14,13 +14,15 @@ namespace Sunny.Application
         public DefaultSunnyRequest(SunnyContext context)
         {
             this.SunnyContext = context;
-
+            this.Feature = featureReference.Fetch(this.SunnyContext.Features);
+            this.Host = new HostString(this.Feature.Host, this.Feature.Port);
+            this.Path = new PathString(this.Feature.Path);
         }
-        private ISunnyRequestFeature Feature => featureReference.Fetch(this.SunnyContext.Features);
+        private ISunnyRequestFeature Feature { get; }
         public override string RequestId => this.Feature.RequestId;
         public override SunnyContext SunnyContext { get; }
-        public override HostString Host => new HostString(this.Feature.Host, this.Feature.Port);
-        public override PathString Path => new PathString(this.Feature.Path);
+        public override HostString Host { get; }
+        public override PathString Path { get; }
         public override SunnyRouteing SunnyRoute { get; internal set; }
         public override long? ContentLength => this.Feature.ContentLength;
         public override Stream Body => this.Feature.Body;

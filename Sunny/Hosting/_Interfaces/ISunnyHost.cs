@@ -6,5 +6,6 @@ namespace Sunny.Hosting
 {
     public interface ISunnyHost
     {
+        void Start();
     }
 }
