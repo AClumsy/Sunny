@@ -6,7 +6,7 @@ using Sunny.Application;
 using System.Threading.Tasks;
 
 
-namespace Sunny.Hosting.Server.HttpListenerServer
+namespace Sunny.Hosting.HttpListenerServer
 {
     public class HttpListenerServer : IServer
     {

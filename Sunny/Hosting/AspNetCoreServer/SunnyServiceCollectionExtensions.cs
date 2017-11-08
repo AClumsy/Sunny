@@ -33,7 +33,6 @@ namespace Microsoft.Extensions.DependencyInjection
                 .AddServices();
 
             return builder;
-
         }
 
     }

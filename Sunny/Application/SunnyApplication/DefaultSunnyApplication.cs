@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sunny.Application.SunnyApplication
+namespace Sunny.Application
 {
     public class DefaultSunnyApplication : ISunnyApplication<DefaultSunnyApplication.Context>
     {

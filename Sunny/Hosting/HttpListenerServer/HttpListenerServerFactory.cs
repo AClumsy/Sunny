@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Sunny.Hosting.Server
+namespace Sunny.Hosting.HttpListenerServer
 {
     public class HttpListenerServerFactory : IServerFactory
     {

@@ -18,6 +18,7 @@ namespace Microsoft.AspNetCore.Builder
         /// <returns></returns>
         public static IApplicationBuilder UseSunny(this IApplicationBuilder app)
         {
+
             app.UseMiddleware<SunnyMiddleware>();
             return app;
         }

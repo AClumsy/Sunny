@@ -6,7 +6,7 @@ using System.Text;
 using System.Net;
 using System.IO;
 
-namespace Sunny.Hosting.Server.AspNetCoreServer
+namespace Sunny.Hosting.AspNetCoreServer
 {
     public class AspNetCoreServerFeature : ISunnyRequestFeature, ISunnyResponseFeature, IConnectionInfoFeature
     {

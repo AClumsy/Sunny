@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Sunny.Application.SunnyApplication
+namespace Sunny.Application
 {
     public class DefaultSunnyApplicationBuilderFactory : ISunnyApplicationBuilderFactory
     {

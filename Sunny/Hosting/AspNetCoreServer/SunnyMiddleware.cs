@@ -1,12 +1,13 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Sunny.Application;
+using Sunny.Application.FeatureCollection;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sunny.Hosting.Server.AspNetCoreServer
+namespace Sunny.Hosting.AspNetCoreServer
 {
     public class SunnyMiddleware
     {
@@ -19,12 +20,12 @@ namespace Sunny.Hosting.Server.AspNetCoreServer
         /// </summary>
         /// <param name="next">The next.</param>
         /// <param name="logger">The logger.</param>
-        public SunnyMiddleware(Microsoft.AspNetCore.Http.RequestDelegate next, ILogger<SunnyMiddleware> logger, 
-            IFeatureCollection _features, ISunnyApplication<SunnyContext> _application)
+        public SunnyMiddleware(Microsoft.AspNetCore.Http.RequestDelegate next, ILogger<SunnyMiddleware> logger,
+            ISunnyApplication<SunnyContext> _application)
         {
-            _next = next;
-            _logger = logger;
-            this.features = _features;
+            this._next = next;
+            this._logger = logger;
+            this.features = new DefaultFeatureCollection();
             this.application = _application;
         }
 

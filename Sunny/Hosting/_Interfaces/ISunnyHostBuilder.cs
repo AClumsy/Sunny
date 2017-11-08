@@ -6,8 +6,8 @@ namespace Sunny.Hosting
 {
     public interface ISunnyHostBuilder
     {
-        ISunnyHost UseServer(IServerFactory factory);
-        ISunnyHost UseStartup(IStartup startup);
+        ISunnyHostBuilder UseServer(IServerFactory factory);
+        ISunnyHostBuilder UseStartup(IStartup startup);
         ISunnyHost Build();
     }
 }
