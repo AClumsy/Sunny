@@ -6,9 +6,14 @@ namespace Sunny.Hosting.HttpListenerServer
 {
     public class HttpListenerServerFactory : IServerFactory
     {
+        private string listenUrl;
+        public HttpListenerServerFactory(string listenUrl = null)
+        {
+            this.listenUrl = listenUrl ?? "http://localhost:418/";
+        }
         public IServer CreateServer()
         {
-            throw new NotImplementedException();
+            return new HttpListenerServer(listenUrl);
         }
     }
 }

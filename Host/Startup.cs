@@ -26,9 +26,12 @@ namespace Host
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            app.UseMiddleware<ServiceCollection>();
             app.UseSunny();
-            
+            app.Use(async (context, next) =>
+            {
+
+            });
             app.Run(async (context) =>
             {
                 await context.Response.WriteAsync("Hello World!");

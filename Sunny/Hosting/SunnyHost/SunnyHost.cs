@@ -25,9 +25,12 @@ namespace Sunny.Hosting
             this.startup.Configure(applicationBuilder);
             IServer server = serviceProvider.GetRequiredService<IServerFactory>().CreateServer();
 
+            //Building SunnyApplication
             var sunnyContextFactory = serviceProvider.GetRequiredService<ISunnyContextFactory>();
             var sunnyApplication = applicationBuilder.Build();
             var hostingApp = new DefaultSunnyApplication(sunnyApplication, sunnyContextFactory);
+
+            //Start Server
             server.StartAsync(hostingApp);
         }
     }

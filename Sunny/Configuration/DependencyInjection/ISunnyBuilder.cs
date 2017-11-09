@@ -17,5 +17,6 @@ namespace Microsoft.Extensions.DependencyInjection
         /// </value>
         IServiceCollection Services { get; }
 
+        ISunnyBuilder Build();
     }
 }

@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Http;
 
 namespace Sunny.Application.Feature
 {
-    public class DefaultSunnyRequestFeature : ISunnyRequestFeature
+    internal class DefaultSunnyRequestFeature : ISunnyRequestFeature
     {
         public DefaultSunnyRequestFeature()
         {

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using Sunny.Application;
 
 namespace Sunny.Services
 {
@@ -10,6 +11,6 @@ namespace Sunny.Services
     /// </summary>
     public interface ISunnyService
     {
-       
+        Task InvokeAsync(SunnyContext context, RequestDelegate next);
     }
 }

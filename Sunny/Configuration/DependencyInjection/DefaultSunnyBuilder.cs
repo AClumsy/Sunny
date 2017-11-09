@@ -29,5 +29,15 @@ namespace Sunny.Configuration
         /// The services.
         /// </value>
         public IServiceCollection Services { get; }
+
+        /// <summary>
+        /// Build the ISunnyBuilder
+        /// </summary>
+        /// <returns></returns>
+        public ISunnyBuilder Build()
+        {
+            this.AddServices();
+            return this;
+        }
     }
 }

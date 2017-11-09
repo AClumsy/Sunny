@@ -28,11 +28,7 @@ namespace Microsoft.Extensions.DependencyInjection
         /// <returns></returns>
         public static ISunnyBuilder AddSunny(this IServiceCollection services)
         {
-            var builder = services.AddSunnyBuilder();
-            builder
-                .AddServices();
-
-            return builder;
+            return services.AddSunnyBuilder().Build();
         }
 
     }

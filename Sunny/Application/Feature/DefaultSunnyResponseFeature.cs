@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Sunny.Application.Feature
 {
-    public class DefaultSunnyResponseFeature : ISunnyResponseFeature
+    internal class DefaultSunnyResponseFeature : ISunnyResponseFeature
     {
         public DefaultSunnyResponseFeature()
         {
