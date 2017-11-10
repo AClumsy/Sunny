@@ -1,6 +1,7 @@
 ﻿using System;
 using Sunny.Hosting;
 using Sunny.Hosting.HttpListenerServer;
+using Sunny.Hosting.SunnyHost;
 
 namespace HostApp
 {
@@ -8,7 +9,7 @@ namespace HostApp
     {
         static void Main(string[] args)
         {
-            new SunnyHostBuilder()
+            new DefaultSunnyHostBuilder()
                              .UseServer(new HttpListenerServerFactory())
                              //.UseStartup<Startup>()
                              .Build()

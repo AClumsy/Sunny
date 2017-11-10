@@ -4,6 +4,9 @@ using System.Text;
 
 namespace Sunny.Application
 {
+    /// <summary>
+    /// Sunny Context 特征集合接口
+    /// </summary>
     public interface IFeatureCollection : IEnumerable<KeyValuePair<Type, object>>
     {
 

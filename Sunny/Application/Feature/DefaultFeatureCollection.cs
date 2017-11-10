@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Sunny.Application.FeatureCollection
+namespace Sunny.Application.Feature
 {
     public class DefaultFeatureCollection : IFeatureCollection
     {

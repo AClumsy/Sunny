@@ -35,3 +35,5 @@ E:\工作项目\Sunny\Host\obj\Debug\netcoreapp2.0\Host.AssemblyInfoInputs.cache
 E:\工作项目\Sunny\Host\obj\Debug\netcoreapp2.0\Host.AssemblyInfo.cs
 E:\工作项目\Sunny\Host\obj\Debug\netcoreapp2.0\Host.dll
 E:\工作项目\Sunny\Host\obj\Debug\netcoreapp2.0\Host.pdb
+E:\Source\Sunny\Host\bin\Debug\netcoreapp2.0\Sunny.dll
+E:\Source\Sunny\Host\bin\Debug\netcoreapp2.0\Sunny.pdb

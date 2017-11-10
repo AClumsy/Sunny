@@ -1,37 +1,71 @@
 ﻿using Microsoft.AspNetCore.Http;
-using Sunny.Application;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Net;
 using System.IO;
+using Sunny.Application.Feature;
 
 namespace Sunny.Hosting.AspNetCoreServer
 {
-    public class AspNetCoreServerFeature : ISunnyRequestFeature, ISunnyResponseFeature, IConnectionInfoFeature
+    public class AspNetCoreServerFeature : ISunnyRequestFeature, ISunnyResponseFeature, ISunnyConnectionInfoFeature, IServiceProvidersFeature
     {
-        public HttpContext Context { get; }
-        public string ConnectionId { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        private HttpContext Context { get; }
 
-        public IPAddress RemoteIpAddress => throw new NotImplementedException();
+        public IPAddress RemoteIpAddress => this.Context.Connection.RemoteIpAddress;
 
-        public IPAddress LocalIpAddress => throw new NotImplementedException();
+        public IPAddress LocalIpAddress => this.Context.Connection.LocalIpAddress;
 
-        public int RemotePort => throw new NotImplementedException();
+        public int RemotePort => this.Context.Connection.RemotePort;
 
-        public int LocalPort => throw new NotImplementedException();
+        public int LocalPort => this.Context.Connection.LocalPort;
 
-        public object ServerContext => throw new NotImplementedException();
+        public object ServerContext => this.Context;
 
-        public Stream OutputStream => throw new NotImplementedException();
+        public Stream OutputStream => this.Context.Response.Body;
 
-        public string StatusCode { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string RequestId { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string Host { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public int Port { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string Path { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public Stream Body { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public long ContentLength { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public string StatusCode
+        {
+            get { return this.Context.Response.StatusCode.ToString(); }
+            set { this.Context.Response.StatusCode = int.Parse(value); }
+        }
+        public string RequestId
+        {
+            get { return ""; }
+            set { }
+        }
+        public string Host
+        {
+            get { return this.Context.Request.Host.ToString(); }
+            set { this.Context.Request.Host = new HostString(value); }
+        }
+        public int Port
+        {
+            get { return this.LocalPort; }
+            set { }
+        }
+        public string Path
+        {
+            get { return ""; }
+            set { }
+        }
+        public Stream Body
+        {
+            get { return this.Context.Request.Body; }
+            set { }
+        }
+        public long ContentLength
+        {
+            get { return (long)this.Context.Request.ContentLength; }
+            set { }
+        }
+        public string ConnectionId
+        {
+            get { return this.Context.Connection.Id; }
+            set { this.Context.Connection.Id = value; }
+        }
+
+        public IServiceProvider RequestServices => this.Context.RequestServices;
 
         public AspNetCoreServerFeature(HttpContext context)
         {

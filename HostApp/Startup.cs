@@ -11,7 +11,7 @@ namespace HostApp
     {
         public void Configure(ISunnyApplicationBuilder app)
         {
-            app.UseClientGateway();
+            app.UseClientServices();
             Func<RequestDelegate, RequestDelegate> middleware = next =>
             {
                 return context =>

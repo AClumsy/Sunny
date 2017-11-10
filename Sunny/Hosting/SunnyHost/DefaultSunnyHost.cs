@@ -4,13 +4,13 @@ using System.Collections.Generic;
 using System.Text;
 using Sunny.Application;
 
-namespace Sunny.Hosting
+namespace Sunny.Hosting.SunnyHost
 {
-    public class SunnyHost : ISunnyHost
+    public class DefaultSunnyHost : ISunnyHost
     {
         private readonly IServiceProvider serviceProvider;
         private readonly IStartup startup;
-        public SunnyHost(IServiceCollection services, IStartup startup)
+        public DefaultSunnyHost(IServiceCollection services, IStartup startup)
         {
             this.startup = startup;
             this.startup.ConfigureServices(services);

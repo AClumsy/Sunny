@@ -1,13 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Sunny.Services;
+using Sunny.Services.Exception;
 
 namespace Microsoft.Extensions.DependencyInjection
 {
-    public static class SunnyBuilderServices
+    public static class SunnyBuilderExtensionsService
     {
-        public static ISunnyBuilder AddServices(this ISunnyBuilder builder)
+        
+        /// <summary>
+        /// 添加异常处理服务
+        /// </summary>
+        /// <param name="builder"></param>
+        /// <returns></returns>
+        public static ISunnyBuilder AddException(this ISunnyBuilder builder)
         {
+            builder.Services.AddTransient<IExceptionService, DefaultExceptionService>();
             return builder;
         }
     }

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Sunny.Application.Feature
 {
-    internal class DefaultConnectionInfoFeature : IConnectionInfoFeature
+    internal class DefaultConnectionInfoFeature : ISunnyConnectionInfoFeature
     {
         public string ConnectionId { get; set; }
         public IPAddress RemoteIpAddress { get;  }

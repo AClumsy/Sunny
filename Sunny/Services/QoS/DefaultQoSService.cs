@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Sunny.Application
+namespace Sunny.Services.QoS
 {
-    public class UseComponentExtensions
+    class DefaultQoSService
     {
     }
 }

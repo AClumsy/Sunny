@@ -13,12 +13,13 @@ namespace Sunny.Services
             _serviceProvider = serviceProvider;
         }
 
-        public ISunnyService Create(Type serviceType)
+        public ISunnyService Create(Type serviceType) 
         {
+
             return _serviceProvider.GetRequiredService(serviceType) as ISunnyService;
         }
 
-        public void Release(ISunnyService middleware)
+        public void Release(ISunnyService service)
         {
             // The container owns the lifetime of the service
         }

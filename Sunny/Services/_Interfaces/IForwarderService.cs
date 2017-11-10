@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Sunny.SunnyApplication.ApplicationModel
+namespace Sunny.Services
 {
-    public class Partner
+    public interface IForwarderService : ISunnyService
     {
     }
 }

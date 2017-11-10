@@ -11,16 +11,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Services\ACL\RateLimiting\" />
-    <Folder Include="Services\ACL\TrustControl\" />
-    <Folder Include="Services\Auth\Authenticated\" />
-    <Folder Include="Services\Auth\Authorisated\" />
-    <Folder Include="Services\Exception\" />
-    <Folder Include="Services\SecondaryCache\" />
-    <Folder Include="Services\QoS\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.0.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.0.0" />
     <PackageReference Include="Microsoft.Extensions.Logging" Version="2.0.0" />

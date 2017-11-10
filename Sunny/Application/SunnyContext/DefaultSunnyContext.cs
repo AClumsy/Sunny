@@ -1,5 +1,4 @@
-﻿using Sunny.Application.FeatureCollection;
-using Sunny.Application.Feature;
+﻿using Sunny.Application.Feature;
 using System;
 using System.Collections.Generic;
 using System.Security.Claims;
@@ -19,17 +18,15 @@ namespace Sunny.Application
             this.Features = featureCollection;
             this.Request = new DefaultSunnyRequest(this);
             this.Response = new DefaultSunnyResponse(this);
-            this.ConnectionInfo = new DefaultConnectionInfo(this);
+            this.ConnectionInfo = new DefaultSunnyConnectionInfo(this);
+            this.RequestServices = featureCollection.Get<IServiceProvidersFeature>().RequestServices;
         }
 
         public override IFeatureCollection Features { get; }
         public override SunnyRequest Request { get; }
         public override SunnyResponse Response { get; }
-        public override ConnectionInfo ConnectionInfo { get; }
+        public override SunnyConnectionInfo ConnectionInfo { get; }
         public override ClaimsPrincipal User { get; }
-
-
-    
- 
+        public override IServiceProvider RequestServices { get; }
     }
 }

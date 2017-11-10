@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sunny.Models;
+using System;
 using System.Collections.Generic;
 using System.Security.Claims;
 using System.Text;
@@ -15,8 +16,8 @@ namespace Sunny.Application
         public abstract IFeatureCollection Features { get; }
         public abstract SunnyRequest Request { get; }
         public abstract SunnyResponse Response { get; }
-        public abstract ConnectionInfo ConnectionInfo { get; }
+        public abstract SunnyConnectionInfo ConnectionInfo { get; }
         public abstract ClaimsPrincipal User { get; }
-
+        public abstract IServiceProvider RequestServices { get; }
     }
 }

@@ -4,21 +4,21 @@ using System.Collections.Generic;
 using System.Reflection;
 using System.Text;
 
-namespace Sunny.Hosting
+namespace Sunny.Hosting.SunnyHost
 {
-    public class SunnyHostBuilder : ISunnyHostBuilder
+    public class DefaultSunnyHostBuilder : ISunnyHostBuilder
     {
         private readonly IServiceCollection services;
         private IStartup startup = new DefaultStartup();
 
-        public SunnyHostBuilder()
+        public DefaultSunnyHostBuilder()
         {
             services = new ServiceCollection();
 
         }
         public ISunnyHost Build()
         {
-            var host = new SunnyHost(services, startup);
+            var host = new DefaultSunnyHost(services, startup);
             return host;
         }
 

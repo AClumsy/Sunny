@@ -4,6 +4,9 @@ using System.Text;
 
 namespace Sunny.Services
 {
+    /// <summary>
+    /// Sunny Service 工厂接口
+    /// </summary>
     public interface ISunnyServiceFactory
     {
         /// <summary>
@@ -11,12 +14,12 @@ namespace Sunny.Services
         /// </summary>
         /// <param name="serviceType">The concrete <see cref="Type"/> of the <see cref="ISunnyService"/>.</param>
         /// <returns>The <see cref="ISunnyService"/> instance.</returns>
-        ISunnyService Create(Type serviceType);
+        ISunnyService Create(Type serviceType );
 
         /// <summary>
         /// Releases a <see cref="ISunnyService"/> instance at the end of each request.
         /// </summary>
-        /// <param name="serviceType">The <see cref="ISunnyService"/> instance to release.</param>
-        void Release(ISunnyService middleware);
+        /// <param name="service">The <see cref="ISunnyService"/> instance to release.</param>
+        void Release(ISunnyService service);
     }
 }

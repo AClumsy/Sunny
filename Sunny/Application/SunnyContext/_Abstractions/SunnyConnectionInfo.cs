@@ -11,7 +11,7 @@ namespace Sunny.Application
     /// <summary>
     /// 请求底层连接的信息。
     /// </summary>
-    public abstract class ConnectionInfo
+    public abstract class SunnyConnectionInfo
     {
         public abstract string Id { get; }
 

@@ -8,7 +8,7 @@ using Sunny.Application.Feature;
 
 namespace Sunny.Hosting.HttpListenerServer
 {
-    public class HttpListenerContextFeature : ISunnyRequestFeature, ISunnyResponseFeature, IConnectionInfoFeature
+    public class HttpListenerContextFeature : ISunnyRequestFeature, ISunnyResponseFeature, ISunnyConnectionInfoFeature
     {
         public HttpListenerContext Context { get; }
         public string RequestId { get { return this.Context.Response.ContentType; } set { this.Context.Response.ContentType = value; } }

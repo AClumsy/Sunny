@@ -19,8 +19,10 @@ namespace Sunny.Application
 
         public Context CreateContext(IFeatureCollection contextFeatures)
         {
-            var context = new Context();
-            context.SunnyContext = _sunnyContextFactory.Create(contextFeatures);
+            var context = new Context
+            {
+                SunnyContext = _sunnyContextFactory.Create(contextFeatures)
+            };
             return context;
         }
 

@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
-//using Sunny.Services;
+using Sunny.Application;
 using Autofac;
 
 namespace Host
@@ -16,7 +16,6 @@ namespace Host
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSunny();
-
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -26,15 +25,12 @@ namespace Host
             {
                 app.UseDeveloperExceptionPage();
             }
-            app.UseMiddleware<ServiceCollection>();
+           
             app.UseSunny();
-            app.Use(async (context, next) =>
-            {
 
-            });
             app.Run(async (context) =>
             {
-                await context.Response.WriteAsync("Hello World!");
+                //await context.Response.WriteAsync("Hello World!");
             });
         }
     }

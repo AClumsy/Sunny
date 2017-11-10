@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Sunny.Logging
+namespace Sunny.Infrastructure.Logging
 {
     /// <summary>
     /// Helper to JSON serialize object data for logging.

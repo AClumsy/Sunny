@@ -9,10 +9,10 @@ using Sunny.Application.Feature;
 
 namespace Sunny.Application
 {
-    public class DefaultConnectionInfo : ConnectionInfo
+    public class DefaultSunnyConnectionInfo : SunnyConnectionInfo
     {
-        private readonly static FeatureReference<IConnectionInfoFeature> featureReference = new FeatureReference<IConnectionInfoFeature>(new DefaultConnectionInfoFeature());
-        public DefaultConnectionInfo(SunnyContext context)
+        private readonly static FeatureReference<ISunnyConnectionInfoFeature> featureReference = new FeatureReference<ISunnyConnectionInfoFeature>(new DefaultConnectionInfoFeature());
+        public DefaultSunnyConnectionInfo(SunnyContext context)
         {
             this.SunnyContext = context;
             this.Feature = featureReference.Fetch(this.SunnyContext.Features);
@@ -20,7 +20,7 @@ namespace Sunny.Application
 
     
         private SunnyContext SunnyContext { get; }
-        private IConnectionInfoFeature Feature { get; }
+        private ISunnyConnectionInfoFeature Feature { get; }
         public override string Id => this.Feature.ConnectionId;
         public override IPAddress RemoteIpAddress => this.Feature.RemoteIpAddress;
         public override int RemotePort => this.Feature.RemotePort;

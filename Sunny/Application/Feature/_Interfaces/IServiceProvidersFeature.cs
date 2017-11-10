@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Sunny.Application
+namespace Sunny.Application.Feature
 {
     public interface IServiceProvidersFeature
     {
-        IServiceProvider RequestServices { get; set; }
+        IServiceProvider RequestServices { get; }
     }
 }

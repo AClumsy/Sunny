@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Net;
 using System.Text;
 
-namespace Sunny.Application
+namespace Sunny.Application.Feature
 {
-    public interface IConnectionInfoFeature: IFeature
+    public interface ISunnyConnectionInfoFeature: IFeature
     {
         /// <summary>
         /// The unique identifier for the connection the request was received on. This is primarily for diagnostic purposes.

@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Sunny.Application;
-using Sunny.Application.FeatureCollection;
+using Sunny.Application.Feature;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -14,19 +14,20 @@ namespace Sunny.Hosting.AspNetCoreServer
         private readonly Microsoft.AspNetCore.Http.RequestDelegate _next;
         private readonly ILogger _logger;
         private readonly IFeatureCollection features;
-        private readonly ISunnyApplication<SunnyContext> application;
+        private readonly ISunnyApplication<DefaultSunnyApplication.Context> application;
         /// <summary> 
         /// Initializes a new instance of the <see cref="SunnyMiddleware"/> class.
         /// </summary>
         /// <param name="next">The next.</param>
         /// <param name="logger">The logger.</param>
-        public SunnyMiddleware(Microsoft.AspNetCore.Http.RequestDelegate next, ILogger<SunnyMiddleware> logger,
-            ISunnyApplication<SunnyContext> _application)
+        public SunnyMiddleware(Microsoft.AspNetCore.Http.RequestDelegate next, ISunnyApplication<DefaultSunnyApplication.Context> app
+            , ILogger<SunnyMiddleware> logger)
         {
             this._next = next;
             this._logger = logger;
+            this.application = app;
             this.features = new DefaultFeatureCollection();
-            this.application = _application;
+
         }
 
         /// <summary>
@@ -40,11 +41,13 @@ namespace Sunny.Hosting.AspNetCoreServer
             AspNetCoreServerFeature feature = new AspNetCoreServerFeature(context);
             this.features.Set<ISunnyRequestFeature>(feature);
             this.features.Set<ISunnyResponseFeature>(feature);
-
-            SunnyContext sunnyContext = this.application.CreateContext(this.features);
+            this.features.Set<IServiceProvidersFeature>(feature);
+            DefaultSunnyApplication.Context sunnyContext = this.application.CreateContext(this.features);
             await this.application.ProcessRequestAsync(sunnyContext)
                 .ContinueWith(_ => application.DisposeContext(sunnyContext, _.Exception));
-            await _next(context);
+
+            if (_next != null)
+                await _next(context);
         }
     }
 }
