@@ -36,8 +36,9 @@ namespace Sunny.Configuration
         /// <returns></returns>
         public ISunnyBuilder Build()
         {
-            this.AddApplication()
-                .AddException();
+            this.AddCore()
+                .AddException()
+                .AddServiceDiscovery();
             return this;
         }
     }

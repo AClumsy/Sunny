@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Sunny.Application;
 using Autofac;
+using Microsoft.Extensions.Logging;
 
 namespace Host
 {
@@ -19,19 +20,15 @@ namespace Host
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
-           
-            app.UseSunny();
+            loggerFactory.AddConsole();
+            app.RunSunny();
 
-            app.Run(async (context) =>
-            {
-                //await context.Response.WriteAsync("Hello World!");
-            });
         }
     }
 }

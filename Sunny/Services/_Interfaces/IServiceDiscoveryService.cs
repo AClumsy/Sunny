@@ -7,7 +7,7 @@ namespace Sunny.Services
     /// <summary>
     /// 服务发现
     /// </summary>
-    public interface IServiceDiscoveryService
+    public interface IServiceDiscoveryService:ISunnyService
     {
     }
 }

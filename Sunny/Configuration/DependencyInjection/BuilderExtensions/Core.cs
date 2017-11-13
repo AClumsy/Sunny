@@ -16,7 +16,7 @@ namespace Microsoft.Extensions.DependencyInjection
         /// </summary>
         /// <param name="builder"></param>
         /// <returns></returns>
-        public static ISunnyBuilder AddApplication(this ISunnyBuilder builder)
+        public static ISunnyBuilder AddCore(this ISunnyBuilder builder)
         {
             builder.Services.AddTransient<ISunnyApplicationBuilderFactory, DefaultSunnyApplicationBuilderFactory>();
             builder.Services.AddTransient<ISunnyContextFactory, DefaultSunnyContextFactory>();

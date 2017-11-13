@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Sunny.Services;
 using Sunny.Services.Exception;
+using Sunny.Services.ServiceDiscovery;
 
 namespace Microsoft.Extensions.DependencyInjection
 {
@@ -17,6 +18,12 @@ namespace Microsoft.Extensions.DependencyInjection
         public static ISunnyBuilder AddException(this ISunnyBuilder builder)
         {
             builder.Services.AddTransient<IExceptionService, DefaultExceptionService>();
+            return builder;
+        }
+
+        public static ISunnyBuilder AddServiceDiscovery(this ISunnyBuilder builder)
+        {
+            builder.Services.AddTransient<IServiceDiscoveryService, DefaultServiceDiscoveryService>();
             return builder;
         }
     }
