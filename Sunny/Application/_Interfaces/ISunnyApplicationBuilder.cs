@@ -7,6 +7,7 @@ namespace Sunny.Application
     public interface ISunnyApplicationBuilder
     {
         RequestDelegate Build();
+
         ISunnyApplicationBuilder Use(Func<RequestDelegate, RequestDelegate> middleware);
     }
 }

@@ -32,8 +32,6 @@ namespace Microsoft.AspNetCore.Builder
                 build.UseSunnyService();
             });
         }
-
-
         /// <summary>
         /// Runs Sunny to the pipeline.
         /// </summary>
@@ -42,7 +40,7 @@ namespace Microsoft.AspNetCore.Builder
         public static IApplicationBuilder RunSunny(this IApplicationBuilder app, Action<ISunnyApplicationBuilder> configureApp)
         {
             app.UseSunny(configureApp);
-            app.Run(async (context) => { });
+            app.Run(async (context) => {  });
             return app;
         }
 
@@ -55,15 +53,14 @@ namespace Microsoft.AspNetCore.Builder
 
         private static DefaultSunnyApplication BuilderSunnyApplication(this IApplicationBuilder app, Action<ISunnyApplicationBuilder> configureApp)
         {
-
             //Get the ISunnyApplicationBuilder
             var builderFactory = app.ApplicationServices.GetRequiredService<ISunnyApplicationBuilderFactory>();
-            ISunnyApplicationBuilder applicationBuilder = builderFactory.CreateBuilder();
-
-            configureApp?.Invoke(applicationBuilder);
-
-            //Building SunnyApplication
             var sunnyContextFactory = app.ApplicationServices.GetRequiredService<ISunnyContextFactory>();
+
+            ISunnyApplicationBuilder applicationBuilder = builderFactory.CreateBuilder();
+            configureApp?.Invoke(applicationBuilder);
+          
+            //Building SunnyApplication
             var sunnyApplication = applicationBuilder.Build();
             return new DefaultSunnyApplication(sunnyApplication, sunnyContextFactory);
         }

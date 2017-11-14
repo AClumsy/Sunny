@@ -16,19 +16,30 @@ namespace Host
     {
         public void ConfigureServices(IServiceCollection services)
         {
+            
             services.AddSunny();
+            services.AddLogging(builder=>
+            {
+                builder.AddFilter("Microsoft", LogLevel.Information);
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
-            loggerFactory.AddConsole();
+
+
+
             app.RunSunny();
 
+            app.Run((context) =>
+            {
+                return context.Response.WriteAsync("测试");
+            });
         }
     }
 }

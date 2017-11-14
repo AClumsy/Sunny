@@ -10,7 +10,7 @@ namespace Sunny.Application
         public static ISunnyApplicationBuilder UseSunnyService(this ISunnyApplicationBuilder builder)
         {
             builder.UseExceptionService()//Exception Handling
-                .UseServiceDiscoveryService();
+                   .UseServiceDiscoveryService();
             return builder;
         }
 

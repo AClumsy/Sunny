@@ -11,16 +11,11 @@ namespace Sunny.Application
     {
         private readonly RequestDelegate _application;
         private readonly ISunnyContextFactory _sunnyContextFactory;
-        /// <summary>
-        /// The logger
-        /// </summary>
-        private readonly ILogger _logger;
 
-        public DefaultSunnyApplication(RequestDelegate application, ISunnyContextFactory sunnyContextFactory, ILogger logger)
+        public DefaultSunnyApplication(RequestDelegate application, ISunnyContextFactory sunnyContextFactory)
         {
             this._application = application;
             this._sunnyContextFactory = sunnyContextFactory;
-            this._logger = logger;
         }
 
         public Context CreateContext(IFeatureCollection contextFeatures)
